@@ -10,6 +10,7 @@ before_install:
 script:
   - docker run -e CI=true sadjana/react-test npm test
 
+  
 after_success:
   - docker build -t sadjana/multi-client ./client
   - docker build -t sadjana/multi-nginx ./nginx
